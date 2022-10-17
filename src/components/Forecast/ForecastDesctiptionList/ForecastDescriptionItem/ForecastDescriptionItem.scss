@@ -1,13 +1,11 @@
 @import "../../../../styles/variables.scss";
 
 .forecast-description-list-item {
-    height: 30px;
     padding: 5px 10px;
 
     &:nth-child(odd) span {
         background-color: $forecast-list-elem-bg;
         display: block;
-        width: 100%;
     }
 
     &:nth-child(2) {
