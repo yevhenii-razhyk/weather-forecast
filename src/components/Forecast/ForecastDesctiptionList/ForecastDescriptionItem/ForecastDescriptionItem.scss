@@ -6,6 +6,7 @@
 
     &:nth-child(odd) span {
         background-color: $forecast-list-elem-bg;
+        display: block;
         width: 100%;
     }
 
