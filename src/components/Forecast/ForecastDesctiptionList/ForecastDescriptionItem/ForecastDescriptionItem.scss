@@ -3,13 +3,16 @@
 .forecast-description-list-item {
     padding: 5px 10px;
 
-    &:nth-child(odd) span {
-        background-color: $forecast-list-elem-bg;
+    & span {
         display: block;
     }
 
+    &:nth-child(odd) span {
+        background-color: $forecast-list-elem-bg;
+    }
+
     &:nth-child(2) {
-        height: 45px;
+        max-height: 45px;
 
         & img {
             width: 40px;
@@ -31,6 +34,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        max-height: 30px;
 
         & img {
             display: block;
