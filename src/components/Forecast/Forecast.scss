@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+
+.forecast {
+    display: flex;
+    overflow: auto;
+
+    & > svg {
+        margin: 0 auto;
+        animation: spin 0.8s linear infinite;
+    }
+
+    &__short {
+        background-color: #FFF;
+        border: 2px solid $accent-color;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        cursor: pointer;
+
+        &-temp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 150px;
+
+            & svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            &-box {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__detail {
+        display: flex;
+        margin-top: 10px;
+        background-color: #FFF;
+        overflow: auto;
+
+        &-values {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            border: 2px solid $accent-color;
+            width: 100%;
+            overflow: auto;
+        }
+    }
+}
+
+.accordion {
+    width: 100%;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

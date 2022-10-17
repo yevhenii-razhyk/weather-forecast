@@ -1,0 +1,91 @@
+@import "../../styles/variables.scss";
+
+.current-weather {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    min-height: 250px;
+
+    &__main {
+        background: $current-weather-background;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+
+        &-info {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+
+        & svg {
+            position: absolute;
+            animation: spin 0.8s linear infinite;
+        }
+
+        &-temp {
+            font-weight: 700;
+            font-size: 72px;
+            color: #FFF;
+        }
+
+        &-city {
+            font-weight: 500;
+            font-size: 32px;
+            color: #FFF;
+        }
+
+        &-date {
+            color: #FFF;
+
+            &-day {
+                font-size: 24px;
+                font-style: italic;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__detail {
+        padding: 15px;
+        background-color: #FFF;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+            position: absolute;
+            animation: spin 0.8s linear infinite;
+        }
+
+        &-list {
+            list-style: none;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-row-gap: 50px;
+            justify-items: center;
+            align-items: center;
+            height: 100%;
+
+            & li {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .current-weather {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 24px;
+    }
+}
