@@ -22,7 +22,7 @@ const ForecastValuesList: React.FC<ForecastValuesListProps> = ({hourForecast}) =
                 <span>{Math.round(hourForecast.main.feels_like)}°C</span>
             </li>
             <li className="forecast-values-list__item">
-                <span>{Math.round(hourForecast.main.pressure * 0.75)} mm</span>
+                <span>{Math.round(hourForecast.main.pressure * 0.75)}mm</span>
             </li>
             <li className="forecast-values-list__item">
                 <span>{hourForecast.main.humidity}%</span>
@@ -31,10 +31,10 @@ const ForecastValuesList: React.FC<ForecastValuesListProps> = ({hourForecast}) =
                 <span>{hourForecast.clouds.all}%</span>
             </li>
             <li className="forecast-values-list__item">
-                <span>{hourForecast.wind.speed.toFixed(1)} m/s</span>
+                <span>{hourForecast.wind.speed.toFixed(1)}m/s</span>
             </li>
             <li className="forecast-values-list__item">
-                <span>{hourForecast.wind.gust.toFixed(1)} m/s</span>
+                <span>{hourForecast.wind.gust.toFixed(1)}m/s</span>
             </li>
         </ul>
     )
