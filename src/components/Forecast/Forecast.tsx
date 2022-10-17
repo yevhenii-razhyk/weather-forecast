@@ -28,7 +28,7 @@ const Forecast: React.FC = () => {
 
     useEffect(() => {
         dispatch(fetchForecast(city))
-    }, [city]) 
+    }, [city, dispatch]) 
 
     const getMinOrMaxTemp = (array: ForecastListElem[], marker: string) => {
         let tempArray = array.map(item => {

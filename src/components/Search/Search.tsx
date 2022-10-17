@@ -33,7 +33,7 @@ const Search: React.FC = () => {
     
     useEffect (() => {
         dispatch(fetchCurrentWeather(city))
-    }, [city])
+    }, [city, dispatch])
 
     return (
         <form className="search" onSubmit={handleSubmit(d => changeSearchCity(d))}>
