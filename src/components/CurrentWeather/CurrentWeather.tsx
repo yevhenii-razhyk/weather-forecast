@@ -14,7 +14,7 @@ const CurrentWeather: React.FC = () => {
 
     useEffect(() => {
         dispatch(fetchCurrentWeather(city))
-    }, [])
+    }, [city, dispatch])
 
     return (
         <div className="current-weather">
