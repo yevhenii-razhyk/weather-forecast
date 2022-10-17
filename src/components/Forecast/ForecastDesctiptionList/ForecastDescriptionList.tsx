@@ -2,7 +2,6 @@ import ForecastDescriptionItem from "./ForecastDescriptionItem/ForecastDescripti
 import "./ForecastDescriptionList.scss"
 
 const ForecastDescriptionList: React.FC = () => {
-    const time: string = "sunrise"
     return (
         <ul className="forecast-description-list">
             <ForecastDescriptionItem icon={"time"} text={"Time"}/>
