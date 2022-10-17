@@ -87,5 +87,33 @@
         grid-template-columns: 1fr;
         grid-column-gap: 0;
         grid-row-gap: 24px;
+
+        &__main {
+
+            &-image {
+                width: 50px;
+            }
+
+            &-temp {
+                font-size: 42px;
+            }
+
+            &-date {
+
+                &-day {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &__detail {
+
+            &-list {
+
+                & > li > img {
+                    width: 20px;
+                }
+            }
+        }
     }
 }
