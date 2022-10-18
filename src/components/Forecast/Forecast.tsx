@@ -10,14 +10,16 @@ import {useEffect} from 'react';
 
 import dayjs from 'dayjs';
 
-import ForecastDescriptionList from './ForecastDesctiptionList/ForecastDescriptionList';
-import ForecastValuesList from './ForecastValuesList/ForecastValuesList';
+// import ForecastDescriptionList from './ForecastDesctiptionList/ForecastDescriptionList';
+// import ForecastValuesList from './ForecastValuesList/ForecastValuesList';
 
 import ForecastListElem from "../../types/ForecastListElem";
 
 import "./Forecast.scss"
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { fetchForecast } from '../../store/reducers/ForecastActionCreator';
+import ForecastDetailValues from './ForecastDetailValues/ForecastDetailValues';
+import ForecastListItem from './ForecastListItem/ForecastListItem';
 
 
 const Forecast: React.FC = () => {
@@ -82,14 +84,22 @@ const Forecast: React.FC = () => {
                             </AccordionItemHeading>
                             <AccordionItemPanel>
                                 <div className="forecast__detail">
-                                    <ForecastDescriptionList/>
-                                    <div className="forecast__detail-values">
-                                        {
-                                            day.map((hourForecast, idx) => (
-                                                <ForecastValuesList key={idx} hourForecast={hourForecast}/>
-                                            ))
-                                        }
-                                    </div>
+                                    <ul className="forecast__detail-list">
+                                        <ForecastListItem text={"Time"} marker={"text"}/>
+                                        <ForecastListItem text={"unknown"} marker={"icon"}/>
+                                        <ForecastListItem text={"Temp"} marker={"text"}/>
+                                        <ForecastListItem text={"Feels like"} marker={"text"}/>
+                                        <ForecastListItem text={"Pressure"} marker={"text"}/>
+                                        <ForecastListItem text={"Humidity"} marker={"text"}/>
+                                        <ForecastListItem text={"Cloudiness"} marker={"text"}/>
+                                        <ForecastListItem text={"Wind"} marker={"text"}/>
+                                        <ForecastListItem text={"Wind gust"} marker={"text"}/>
+                                    </ul>
+                                    {
+                                        day.map((hourForecast, idx) => (
+                                            <ForecastDetailValues key={idx} hourForecast={hourForecast}/>
+                                        ))
+                                    }
                                 </div>
                             </AccordionItemPanel>
                         </AccordionItem>
