@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../../axios";
 import { IForecast } from "../../models/IForecast";
 import { AppDispatch } from "../store";
 import { forecastSlice } from "./ForecastSlice";
@@ -21,7 +21,7 @@ const restructuriseArray = (data:any) => {
 export const fetchForecast = (city: string) => async (dispatch: AppDispatch) => {
     try {
         dispatch(forecastSlice.actions.forecastFetching());
-        const response = await axios.get<IForecast>(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=15329a0fa39b7a56125985c2de13197b`);
+        const response = await api.get<IForecast>(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric`);
         dispatch(forecastSlice.actions.forecastFetchingSucces(Object.assign(response.data, {list: restructuriseArray(response.data.list)})))
     } catch (e: any) {
         dispatch(forecastSlice.actions.forecastFetchingError({cod: e.response.data.cod, message: e.response.data.message}))
