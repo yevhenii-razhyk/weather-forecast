@@ -14,9 +14,12 @@
         grid-row-gap: 10px;
         
         &__item {
-            overflow: auto;
             display: grid;
             grid-row-gap: 10px;
+        }
+
+        &__panel {
+            overflow: auto;
         }
     }
 }

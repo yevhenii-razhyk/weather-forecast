@@ -13,7 +13,7 @@
     &__list {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr repeat(7, 1fr);
+        grid-template-rows: 1fr 2fr repeat(8, 1fr);
         grid-row-gap: 5px;
         align-items: center;
 
