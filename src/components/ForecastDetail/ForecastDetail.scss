@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+
+.forecast-detail {
+    display: grid;
+    grid-template-columns: minmax(80px, 100px) repeat(8, 1fr);
+    grid-column-gap: 15px;
+    padding: 10px;
+    background-color: #FFF;
+    border: 2px solid $accent-color;
+    border-radius: 10px;
+    overflow: auto;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr repeat(7, 1fr);
+        grid-row-gap: 5px;
+        align-items: center;
+
+        &:not(:first-child) > li {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}

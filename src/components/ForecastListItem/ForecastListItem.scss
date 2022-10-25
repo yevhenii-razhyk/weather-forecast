@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.forecast-list-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+        width: 40px;
+    }
+
+    &__text {
+        width: 100%;
+    }
+
+    &:nth-child(odd) &__text {
+        background-color: $forecast-list-elem-bg;
+    }
+}

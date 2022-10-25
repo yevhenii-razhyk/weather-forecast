@@ -2,97 +2,22 @@
 
 .forecast {
     display: flex;
-    overflow: auto;
+    min-height: 150px;
 
     & > svg {
         margin: 0 auto;
-        animation: spin 0.8s linear infinite;
     }
 
-    &__short {
-        background-color: #FFF;
-        border: 2px solid $accent-color;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px;
-        cursor: pointer;
-
-        &-temp {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 150px;
-
-            & svg {
-                width: 28px;
-                height: 28px;
-            }
-
-            &-box {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-
-    &__detail {
+    & .accordion {
+        width: 100%;
         display: grid;
-        grid-template-columns: minmax(80px, 100px) repeat(8, 1fr);
-        grid-column-gap: 15px;
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #FFF;
-        border: 2px solid $accent-color;
-        border-radius: 10px;
-        overflow: auto;
-
-        &-list {
+        grid-row-gap: 10px;
+        
+        &__item {
+            overflow: auto;
             display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 2fr repeat(7, 1fr);
-            grid-row-gap: 5px;
-            align-items: center;
-
-            &-item {
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-
-                &-image {
-                    width: 40px;
-                }
-
-                & span {
-                    width: 100%;
-                }
-
-                &:nth-child(odd) span {
-                    background-color: $forecast-list-elem-bg;
-                }
-            }
-
-            &:not(:first-child) &-item {
-                align-items: center;
-                text-align: center;
-            }
+            grid-row-gap: 10px;
         }
     }
 }
 
-.accordion {
-    width: 100%;
-
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: 10px;
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .forecast__short-temp {
-        width: 80px;
-    }
-}

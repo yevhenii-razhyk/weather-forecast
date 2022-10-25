@@ -1,0 +1,55 @@
+@import "../../styles/variables.scss";
+
+.weather-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    & svg {
+        position: absolute;
+    }
+
+    &__temp {
+        font-weight: 700;
+        font-size: 72px;
+        color: #FFF;
+    }
+
+    &__city {
+        font-weight: 500;
+        font-size: 32px;
+        color: #FFF;
+    }
+
+    &__date {
+        color: #FFF;
+
+        &-day {
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .weather-main {
+        &__image {
+            width: 50px;
+        }
+
+        &__temp {
+            font-size: 42px;
+        }
+
+        &__date {
+
+            &-day {
+                font-size: 18px;
+            }
+        }
+    }
+}

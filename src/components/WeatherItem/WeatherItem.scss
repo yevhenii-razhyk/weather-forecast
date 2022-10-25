@@ -1,0 +1,12 @@
+.weather-item {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .weather-item {
+
+        &__image {
+            width: 20px;;
+        }
+    }
+}
