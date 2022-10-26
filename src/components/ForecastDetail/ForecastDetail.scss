@@ -2,7 +2,6 @@
 
 .forecast-detail {
     display: grid;
-    grid-template-columns: minmax(80px, 100px) repeat(8, 1fr);
     grid-column-gap: 15px;
     padding: 10px;
     background-color: #FFF;

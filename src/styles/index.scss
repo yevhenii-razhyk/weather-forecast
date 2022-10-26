@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./fonts.scss";
 
 * {
     box-sizing: border-box;
@@ -13,7 +14,10 @@ html, body {
 }
 
 body {
-    min-width: 315px;
+    font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    min-width: 300px;
 }
 
 #root {

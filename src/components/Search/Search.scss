@@ -6,6 +6,7 @@
     grid-column-gap: 50px;
 
     &__input {
+        font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
         font-size: 16px;
         border-radius: 25px;
         padding: 15px;
@@ -29,6 +30,6 @@
 @media (max-width: 480px) {
     .search {
         grid-column-gap: 15px;
-        grid-template-columns: 1fr 50px;    
+        grid-template-columns: minmax(200px, auto) 50px;    
     }
 }

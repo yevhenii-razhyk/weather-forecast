@@ -10,7 +10,7 @@ interface ForecastDetailProps {
 
 const ForecastDetail: React.FC<ForecastDetailProps> = ({day}) => {
     return (
-        <div className="forecast-detail">
+        <div className="forecast-detail" style={{"gridTemplateColumns": `100px repeat(${day.length < 9 ? 8 : day.length}, 1fr)`}}>
             <ul className="forecast-detail__list">
                 <ForecastListItem text={"Time"} marker={"text"}/>
                 <ForecastListItem text={"unknown"} marker={"icon"}/>
