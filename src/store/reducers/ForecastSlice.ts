@@ -8,32 +8,11 @@ interface ForecastState {
     error: IWeatherError;
 }
 
-const initialState: ForecastState = {
-    forecast: {
-        cod: "",
-        message: 0,
-        cnt: 0,
-        list: [[]],
-        city: {
-            id: 0,
-            name: "",
-            coord: {
-                lat: 0,
-                lon: 0,
-            },
-            country: "",
-            population: 0,
-            timezone: 0,
-            sunrise: 0,
-            sunset: 0,
-        }
-    },
+const initialState = {
+    forecast: {},
     isLoading: false,
-    error: {
-        cod: "",
-        message: "",
-    },
-}
+    error: {}
+} as ForecastState;
 
 export const forecastSlice = createSlice({
     name: "forecast",

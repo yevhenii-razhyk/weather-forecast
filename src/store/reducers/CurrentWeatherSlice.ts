@@ -9,55 +9,11 @@ interface CurrentWeatherState {
     error: IWeatherError;
 }
 
-const initialState: CurrentWeatherState = {
-    currentWeather: {
-        coord: {
-            lat: 0,
-            lon: 0,
-        },
-        weather: [{
-            description: "",
-            icon: "unknown",
-            id: 0,
-            main: "",
-        }],
-        base: '',
-        main: {
-            feels_like: 0,
-            grnd_level: 0,
-            humidity: 0,
-            pressure: 0,
-            sea_level: 0,
-            temp: 0,
-            temp_max: 0,
-            temp_min: 0,
-        },
-        visibility:	0,
-        wind: {
-            deg: 0,
-            gust: 0,
-            speed: 0,
-        },
-        clouds: {
-            all: 0,
-        },
-        dt:	0,
-        sys:	{
-            country: "",
-            sunrise: "",
-            sunset: "",
-        },
-        timezone: 0,
-        id: 0,
-        name: "",
-        cod: 0,
-    },
+const initialState = {
+    currentWeather: {},
     isLoading: false,
-    error: {
-        cod: "",
-        message: "",
-    },
-}
+    error: {},
+} as CurrentWeatherState;
 
 export const currentWeatherSlice = createSlice({
     name: 'current weather',
