@@ -1,8 +1,7 @@
 type Weather = {
-    description: string,
-    icon: string,
-    id: number,
-    main: string,
-}
+    code: number;
+    icon: string;
+    description: string;
+};
 
 export default Weather;

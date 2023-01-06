@@ -12,12 +12,14 @@ import {
 import storage from 'redux-persist/lib/storage'
 import currentWeatherReducer from './reducers/CurrentWeatherSlice';
 import city from "./reducers/CitySlice";
-import forecastReducer from "./reducers/ForecastSlice"
+import forecastReducer from "./reducers/ForecastSlice";
+import shortForecastReducer from './reducers/ShortForecastSlice';
 
 
 const rootReducer = combineReducers({
     currentWeatherReducer,
     forecastReducer,
+    shortForecastReducer,
     city
 });
 

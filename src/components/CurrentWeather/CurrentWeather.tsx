@@ -4,8 +4,8 @@ import { fetchCurrentWeather } from '../../store/reducers/CurrentWeatherActionCr
 import "./CurrentWeather.scss";
 import Error from "../Error/Error"
 import Loader from '../Loader/Loader';
-import WeatherMain from '../WeatherMain/WeatherMain';
-import WeatherList from '../WeatherList/WeatherList';
+import WeatherMain from './WeatherMain';
+import WeatherList from './WeatherList';
 
 const CurrentWeather: React.FC = () => {
 
@@ -16,7 +16,6 @@ const CurrentWeather: React.FC = () => {
     useEffect(() => {
         dispatch(fetchCurrentWeather(city))
     }, [city, dispatch])
-
     return (
         <div className="current-weather">
             <div className="current-weather__main">
@@ -35,4 +34,4 @@ const CurrentWeather: React.FC = () => {
     )
 }
 
-export default CurrentWeather
+export default CurrentWeather;

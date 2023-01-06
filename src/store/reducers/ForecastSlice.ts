@@ -1,9 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
-import { IModifiedForecast } from '../../models/IModifiedForecast';
+import { IDetailForecast } from '../../models/IDetailForecast';
 import { IWeatherError } from '../../models/IWeatherError';
 
 interface ForecastState {
-    forecast: IModifiedForecast;
+    forecast: IDetailForecast;
     isLoading: boolean;
     error: IWeatherError;
 }
