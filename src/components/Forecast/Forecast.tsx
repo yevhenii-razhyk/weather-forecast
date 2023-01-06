@@ -21,8 +21,6 @@ const Forecast: React.FC = () => {
         dispatch(fetchForecast(city));
         dispatch(fetchShortForecast(city))
     }, [city, dispatch])
-    const forecastList = restructuriseForecastArray(forecast.list); 
-    const forecastDetail = forecastList.length < 6 ? forecastList : forecastList.slice(0, 5);
 
     return (
         <section className='forecast'>
@@ -49,7 +47,7 @@ const Forecast: React.FC = () => {
                 forecast.cod === "200"  &&
                 shortForecast.country_code 
                 ? 
-                    <ForecastDaysList list={forecastDetail} shortList={shortForecast}/>
+                    <ForecastDaysList list={(restructuriseForecastArray(forecast.list)).slice(0, 5)} shortList={shortForecast}/>
                 :   <></>
             }
         </section>
